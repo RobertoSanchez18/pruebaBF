@@ -1,0 +1,27 @@
+<h1 style="padding-bottom: 32px;">Usuarios</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Tipo Documento</th>
+            <th>Numero Documento</th>
+            <th>Email</th>
+            <th>Celular</th>
+            <th>Contraseña</th>
+            <th>Tipo de Usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of usuarios">
+            <td>{{ item.name }}</td>
+            <td>{{ item.surname }}</td>
+            <td>{{ item.tipoDocumento }}</td>
+            <td>{{ item.numeroDocumento }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.celphone }}</td>
+            <td>{{ item.password }}</td>
+            <td>{{ item.tipoUsuario === 'D' ? 'Docente' : 'Administrador' }}</td>
+        </tr>
+    </tbody>
+</table>
